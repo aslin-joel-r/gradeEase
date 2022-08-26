@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../haptics.js"></script>
+
+    <title>Haptics</title>
+
+    <body>
+
+        <button onclick="graph()">Vibrate</button>
+        <button onclick="graphNeeded()">Feel Needed</button>
+        <button onclick="graphCapacity()">Feel Capacity</button>
+
+
+        <script>
+            function graph() {
+                Haptics.vibrate([100, 1000, 150, 1000, 200, 1000, 250, 1000, 300, 1000, 350, 1000, 400, 1000, 450, 1000, 500]);
+            }
+
+        function graphNeeded() {
+            Haptics.vibrate([1000, 1000, 1000, 1000, 980, 950, 980, 920, 830, 800, 730, 750, 740, 700, 680, 630, 660, 600, 640, 570, 620, 530, 580, 480, 470, 430, 400, 380, 370, 350, 340, 310, 280, 240, 250, 220, 210, 180, 175, 165, 143, 121, 111, 89, 76,67, 59, 43, 32, 21, 10, 8, 6, 4, 2]);
+            
+        };
+
+        function graphCapacity() {
+            Haptics.vibrate([1000, 1000, 1000, 1000, 980, 950, 980, 920, 850, 900, 820, 960, 800, 900, 780, 870, 750, 830, 730, 830, 700, 830, 680, 800, 660, 800, 640, 800, 620, 800, 660]);
+        };
+        </script>
+
+
+    </body>
+
+</html>
